@@ -11,6 +11,6 @@ public class ScriptButton : Button
 	private void _on_Play_pressed() => GetTree().ChangeScene(PathToRoot);
 
 	private void _on_Setting_pressed() => GetTree().ChangeScene(PathToSetting);
-
+	
 	private void _on_Exit_pressed() => GetTree().Quit();
 }
