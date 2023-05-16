@@ -10,16 +10,19 @@ public class KinematicBody2D : Godot.KinematicBody2D
 
 	public override void _Ready()
 	{
-		sizeWindows = GetViewport().GetVisibleRect().Size;
+		sizeWindows = OS.WindowSize;
 	}
 	
 	public override void _Process(float delta)
 	{
 		//изменение координат объекта
 		if (!_isMousePressed) return;
+		
 		var vel = Speed * Dir() * delta;
 		MoveAndSlide(vel);
 	}
+	
+	
 	//Узел, на проверку нажатия левой клавиши мыши
 	private void _on_KinematicBody2D_input_event(object viewport, object @event, int shape_idx) =>
 		_isMousePressed = Input.IsActionPressed("ui_press_left");
