@@ -1,18 +1,22 @@
 using Godot;
 using System;
 
-public class CoinCount : RichTextLabel
+public class CoinCount : Label
 {
-    public int coin;
-    // Called when the node enters the scene tree for the first time.
-    public override void _Ready()
-    {
-        
-    }
+	private Label countCoin;
+	public CoinCount()
+	{ 
+	}
 
-//  // Called every frame. 'delta' is the elapsed time since the previous frame.
-//  public override void _Process(float delta)
-//  {
-//      
-//  }
+	public override void _Ready()
+	{
+		countCoin = GetNode<Label>("/root/Root/Node/UI/Control/Coin");
+		countCoin.Text = "100";
+	}
+
+	public override void _Process(float delta)
+	{
+	}
+	
+
 }

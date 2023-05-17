@@ -3,7 +3,6 @@ using System;
 
 public class CollisionChecker : Node2D
 {
-	private Water _water = new Water();
 	public override void _Ready()
 	{
 		Connect("body_entered", this, nameof(OnBodyEntered));

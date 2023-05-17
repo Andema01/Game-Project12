@@ -3,10 +3,7 @@ using System;
 
 public class Main : Node2D
 {
-	[Export]
-	public int Coins { get; set; }
 
-	
 	public override void _Ready()
 	{
 	}
@@ -17,3 +14,4 @@ public class Main : Node2D
 //      
 //  }
 }
+
