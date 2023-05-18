@@ -2,4 +2,9 @@
   <PropertyGroup>
     <TargetFramework>net472</TargetFramework>
   </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Program Files\Gobot\Godot_v3.5.2-stable_mono_win64\GodotSharp\Tools\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>

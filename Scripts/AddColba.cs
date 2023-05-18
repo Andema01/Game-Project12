@@ -12,7 +12,6 @@ public class AddColba : Area2D
 	private Label _text;
 	private bool isProcessing = false;
 	private int i = 0;
-	
 	static List<string> employees = new List<string> { "red", "blue", "yellow" };
 	Queue<string> typeColba = new Queue<string>(employees);
 	
@@ -27,7 +26,7 @@ public class AddColba : Area2D
 	public override void _Process(float delta)
 	{
 		if (_isMousePressed && isProcessing)
-		{ 
+		{
 			_countCoin.Text = CheckCoin();
 			isProcessing = false;
 		}

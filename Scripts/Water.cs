@@ -1,15 +1,36 @@
-using Godot;
-using System;
 using System.Collections.Generic;
+using Godot;
 
-public class Water : StaticBody2D
+namespace Game.Scripts
 {
-	private List<string> combination;
-	
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
+	public class Water
 	{
-		combination = new List<string>();
+		private static string _combination = "";
+	
+		public static void AddList(string name)
+		{
+			_combination += ConvertColor(name);
+		}
+
+		public static void Return()
+		{
+			GD.Print(_combination);
+		}
+
+		private static string ConvertColor(string name)
+		{
+			switch (name)
+			{
+				case "FlaskRed": return "R";
+				case "FlaskBlue": return "B";
+				case "FlaskYellow": return "Y";
+				case "FlaskGreen": return "G";
+				case "FlaskOrange": return "O";
+				case "FlaskPurple": return "P";
+				case "FlaskWhite": return "W";
+				case "FlaskBlack": return "Z";
+				default: return "";
+			}
+		}
 	}
 }
-
