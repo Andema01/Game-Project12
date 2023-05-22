@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using Godot;
 
 public class MoveFlask : KinematicBody2D
@@ -5,8 +6,11 @@ public class MoveFlask : KinematicBody2D
 	private const int Speed = 1200; //скорость перемещения объекта
 	private bool _isMousePressed;
 	private Sprite _light;
+	private KinematicBody2D _body;
+	private string _name;
 	private float _xPosition;
 	private float _yPosition;
+	
 
 	public override void _Ready()
 	{
@@ -56,6 +60,7 @@ public class MoveFlask : KinematicBody2D
 		ZIndex = 1;
 		CollisionLayer = 2;
 		CollisionMask = 2;
+	
 	}
 	
 	private void OnMouseExited()

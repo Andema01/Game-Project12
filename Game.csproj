@@ -1,8 +1,10 @@
 <Project Sdk="Godot.NET.Sdk/3.3.0">
   <PropertyGroup>
     <TargetFramework>net472</TargetFramework>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\Program Files\Gobot\Godot_v3.5.2-stable_mono_win64\GodotSharp\Tools\Newtonsoft.Json.dll</HintPath>
     </Reference>

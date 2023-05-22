@@ -1,6 +1,9 @@
 using Godot;
 using System;
 
+/// <summary>
+/// Скрипт для кнопок в главном меню
+/// </summary>
 public class ScriptButton : Button
 {
 	private const string PathToRoot = "res://Scenes/Root.tscn";

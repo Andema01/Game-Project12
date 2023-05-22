@@ -5,32 +5,37 @@ namespace Game.Scripts
 {
 	public class Water
 	{
-		private static string _combination = "";
+		private static string _combination;
 	
-		public static void AddList(string name)
+		public void AddList(string name)
 		{
 			_combination += ConvertColor(name);
 		}
 
-		public static void Return()
+		public string Return()
 		{
-			GD.Print(_combination);
+			return _combination;
 		}
 
-		private static string ConvertColor(string name)
+		public void Remove()
 		{
-			switch (name)
-			{
-				case "FlaskRed": return "R";
-				case "FlaskBlue": return "B";
-				case "FlaskYellow": return "Y";
-				case "FlaskGreen": return "G";
-				case "FlaskOrange": return "O";
-				case "FlaskPurple": return "P";
-				case "FlaskWhite": return "W";
-				case "FlaskBlack": return "Z";
-				default: return "";
-			}
+			_combination = "";
 		}
+
+			private static string ConvertColor(string name)
+			{
+				return name switch
+				{
+					"FlaskRed" => "R",
+					"FlaskBlue" => "B",
+					"FlaskYellow" => "Y",
+					"FlaskGreen" => "G",
+					"FlaskOrange" => "O",
+					"FlaskPurple" => "P",
+					"FlaskWhite" => "W",
+					"FlaskBlack" => "Z",
+					_ => ""
+				};
+			}
 	}
 }
