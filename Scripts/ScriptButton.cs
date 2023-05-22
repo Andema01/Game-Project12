@@ -1,6 +1,9 @@
 using Godot;
 using System;
 
+/// <summary>
+/// Скрипт для кнопок в главном меню
+/// </summary>
 public class ScriptButton : Button
 {
 	private const string PathToRoot = "res://Scenes/Root.tscn";
@@ -11,6 +14,6 @@ public class ScriptButton : Button
 	private void _on_Play_pressed() => GetTree().ChangeScene(PathToRoot);
 
 	private void _on_Setting_pressed() => GetTree().ChangeScene(PathToSetting);
-
+	
 	private void _on_Exit_pressed() => GetTree().Quit();
 }
